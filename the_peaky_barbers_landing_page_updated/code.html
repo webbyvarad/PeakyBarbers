@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Peaky Barbers | Premium Grooming Pune</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Serif for elegance, Sans for readability -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              charcoal: '#1a1a1a',
+              gold: '#c5a059',
+              offwhite: '#f9f9f9',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    body {
+      background-color: #ffffff;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero-text {
+      letter-spacing: 0.15em;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+  </style>
+<style data-purpose="layout-utilities">
+    .hero-overlay {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="font-sans">
+<!-- BEGIN: Navigation -->
+<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 px-8 py-6 flex justify-between items-center" data-purpose="main-navigation">
+<div class="text-xs uppercase tracking-[0.3em] font-medium hidden md:block">
+<a class="nav-link mx-4" href="#">About</a>
+<a class="nav-link mx-4" href="{{DATA:SCREEN:SCREEN_5}}">Services</a>
+</div>
+<div class="text-2xl font-serif font-bold tracking-widest uppercase text-brand-charcoal">
+      The Peaky Barbers
+    </div>
+<div class="text-xs uppercase tracking-[0.3em] font-medium hidden md:block">
+<a class="nav-link mx-4" href="#">Location</a>
+<a class="nav-link mx-4" href="{{DATA:SCREEN:SCREEN_5}}">Book Now</a>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 8h16M4 16h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</button>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Hero Section -->
+<header class="relative h-screen flex items-center justify-center text-white overflow-hidden" data-purpose="hero-banner">
+<!-- Image Placeholder for atmospheric barber shop image -->
+<img alt="Classic Barber Shop" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJwUT4bF5tiwaHEbMA01RYXOVoQK3hXI6OCoW7KUBvpl24BNBOJOyhXHrCoRuKrY5Aq28IjJhzGHoNhOVE3Dvahi8utpJO17LgV_VNW_LS34t2RUVnbo0zUP_ZGmKDRSdjuOxqLgM9CvB-2jGJWzFWkGR8UM1dyDsf-TeAxks5bHOqtnEYG2KQ1Gp1QIlQLlKW3N9D8JVfBRueEX9TmR37RO8Dp8v2xMJsVhux_qW60_PfWaz7qowKVabPS4eXOxZElQDCFZDwVUs"/>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<p class="uppercase tracking-[0.5em] text-sm mb-6 animate-pulse">Pune's Finest Grooming</p>
+<h1 class="font-serif text-6xl md:text-8xl hero-text mb-8">THE PEAKY BARBERS</h1>
+<div class="w-24 h-px bg-white mx-auto mb-8"></div>
+<p class="font-serif italic text-xl md:text-2xl tracking-wide opacity-90">"Excellent Service"</p>
+<div class="mt-12">
+<a class="inline-block border border-white px-10 py-4 text-xs uppercase tracking-[0.3em] hover:bg-white hover:text-brand-charcoal transition-all duration-500" href="{{DATA:SCREEN:SCREEN_5}}">
+          Experience Excellence
+        </a>
+</div>
+</div>
+</header>
+<!-- END: Hero Section -->
+<main>
+<!-- BEGIN: About Section -->
+<section class="py-24 px-8 bg-brand-offwhite" data-purpose="about-section">
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4 block">Our Legacy</span>
+<h2 class="font-serif section-title mb-8">OUR STORY</h2>
+<p class="text-gray-600 leading-relaxed mb-6 font-light">
+            Founded with a passion for grooming and an unwavering dedication to craftsmanship, The Peaky Barbers has become synonymous with excellence in Pune. Inspired by the rich heritage of traditional barbering, we have set a new standard in prestigious grooming experiences.
+          </p>
+<p class="text-gray-600 leading-relaxed font-light">
+            Our tailored grooming experiences are meticulously crafted to meet each client's unique preferences, with personalised services that go above and beyond. We ensure the highest standards of quality and innovation, providing nothing less than grooming excellence.
+          </p>
+</div>
+<div class="relative">
+<img alt="Barber at work" class="w-full h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArJywPm0UPlLzgGfPsKW19oLalOF4OvxIH5hKjDEFU_IN1lFUw2qRLBip6OvQJzeB2EQmY-GK9bntjNlZo7_C5Fb1QbQgO3TmusIzNSuOEotm75sKfEyHGSUp6Vi1F7rsi_-flLNxelpG36xpnMgGJ4j24IBtmzvFxX8-clrGNgVBKd17iM71GtQL3tWlTs4sUadVdTrrhU248I-SioFDig2BpTHcY_Bg_Xpsoe1kom6ITzXNE2ukDQ0l8dg9BiQQjhYv1Aw1gGcE"/>
+</div>
+</div>
+</section>
+<!-- END: About Section -->
+<!-- BEGIN: Testimonial & Rating -->
+<section class="py-24 px-8 text-center" data-purpose="testimonials">
+<div class="max-w-4xl mx-auto">
+<div class="flex justify-center mb-8">
+<!-- Google Stars -->
+<div class="flex gap-1 text-brand-gold">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+</div>
+<h2 class="font-serif text-4xl mb-6">"Excellent Service"</h2>
+<p class="uppercase tracking-widest text-xs font-medium text-gray-500 mb-12">Verified Client Testimonial</p>
+<div class="bg-brand-charcoal text-white p-12 inline-block rounded-sm">
+<div class="flex items-center gap-6">
+<div class="text-5xl font-serif">5.0</div>
+<div class="text-left">
+<p class="uppercase tracking-widest text-[10px] opacity-60">Google Rating</p>
+<p class="text-sm font-light">Based on 13 Reviews</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Testimonial & Rating -->
+<!-- BEGIN: Location Details -->
+<section class="py-24 bg-brand-charcoal text-white" data-purpose="contact-details" id="booking">
+<div class="max-w-6xl mx-auto px-8 grid md:grid-cols-3 gap-12 text-center md:text-left">
+<!-- Address -->
+<div class="border-t border-gray-700 pt-8">
+<h3 class="font-serif text-2xl mb-4">Location</h3>
+<p class="text-gray-400 font-light leading-relaxed">
+            Shop No 1, Sinhgad,<br/>
+            Pune, Maharashtra
+          </p>
+</div>
+<!-- Hours -->
+<div class="border-t border-gray-700 pt-8">
+<h3 class="font-serif text-2xl mb-4">Timings</h3>
+<p class="text-gray-400 font-light leading-relaxed">
+            Open Daily until Late<br/>
+<span class="text-brand-gold">Closes 11:00 PM</span>
+</p>
+</div>
+<!-- Call to Action -->
+<div class="border-t border-gray-700 pt-8 flex flex-col justify-between">
+<h3 class="font-serif text-2xl mb-4">Reservations</h3>
+<a class="text-brand-gold uppercase tracking-widest text-sm hover:text-white transition-colors" href="{{DATA:SCREEN:SCREEN_5}}">
+            Book Appointment →
+          </a>
+</div>
+</div>
+</section>
+<!-- END: Location Details -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-brand-charcoal text-white py-16 px-8 border-t border-gray-800" data-purpose="site-footer">
+<div class="max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center mb-12">
+<div class="text-center md:text-left mb-8 md:mb-0">
+<h4 class="font-serif text-2xl font-bold tracking-widest uppercase mb-2">The Peaky Barbers</h4>
+<p class="text-[10px] uppercase tracking-[0.4em] text-gray-500">Pune • Established MCMXXIV</p>
+</div>
+<div class="flex gap-8 text-[10px] uppercase tracking-widest font-medium">
+<a class="hover:text-brand-gold transition-colors" href="#">Instagram</a>
+<a class="hover:text-brand-gold transition-colors" href="#">Facebook</a>
+<a class="hover:text-brand-gold transition-colors" href="#">Twitter</a>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] uppercase tracking-[0.2em] text-gray-500 border-t border-gray-800 pt-8">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+<a href="#">Grooming Advice</a>
+<a href="#">Licencing</a>
+<span>© 2024 THE PEAKY BARBERS</span>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: Floating WhatsApp Button (Matching original layout) -->
+<a aria-label="Contact on WhatsApp" class="fixed bottom-8 right-8 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform z-50" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+<!-- END: Floating WhatsApp Button -->
+</body></html>

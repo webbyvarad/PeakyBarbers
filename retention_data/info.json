@@ -1,0 +1,78 @@
+{
+  "brandName": "The Peaky Barbers",
+  "location": {
+    "city": "Pune",
+    "address": "Shop No 1, Sinhgad Campus, Pune, MH 411041",
+    "phone": "+91 00000 00000",
+    "email": "contact@peakybarbers.com"
+  },
+  "hours": {
+    "weekdays": "10:00 AM - 11:00 PM",
+    "weekends": "10:00 AM - 11:00 PM"
+  },
+  "services": [
+    {
+      "name": "Precision Haircut",
+      "price": "₹1,200",
+      "duration": "45 Mins",
+      "description": "A tailored consultation followed by a precision cut, wash, and styling with premium products."
+    },
+    {
+      "name": "Beard Sculpting",
+      "price": "₹800",
+      "duration": "30 Mins",
+      "description": "Expert shaping and trimming to enhance your facial features, finished with premium beard oil."
+    },
+    {
+      "name": "The Royal Shave",
+      "price": "₹1,500",
+      "duration": "60 Mins",
+      "description": "Our signature straight-razor shave. Includes hot towel prep, pre-shave oils, rich lather, and a cooling post-shave balm."
+    },
+    {
+      "name": "Scalp Massage",
+      "price": "₹950",
+      "duration": "20 Mins",
+      "description": "An invigorating treatment using essential oils to relieve tension and promote healthy hair growth."
+    },
+    {
+      "name": "Signature Facial",
+      "price": "₹1,800",
+      "duration": "45 Mins",
+      "description": "Rejuvenating skin treatment designed specifically for men's skin. Deep cleansing, exfoliation, and hydration."
+    },
+    {
+      "name": "Gentleman's Package",
+      "price": "₹3,200",
+      "duration": "120 Mins",
+      "description": "The ultimate experience. Includes Classic Haircut, Royal Shave, and a Scalp Massage.",
+      "isRecommended": true
+    }
+  ],
+  "barbers": [
+    {
+      "name": "Marcus V.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBqcWmmTpWd0hzDOk1GmO5GV61J-QYhFgI1MaE_9c9N-Qwf_P2cURrEjTAS5TmnK_zjx1_eb_NjE7cUmc5onAA8PDE4ef1c5eSYokL4tBbn-WvgYYoJNSIxshllQyZXw74QzYCxr4yDPfD0_FVpMkp4nY3Y5glPg8rOxNUWI4MSXy9zIMt9N6oGOMfdp9dQvUsfvDI5AypoUM5e4s5fWsnGjwE4UCcRA3UzOjEhVRkunGW6Bg_UV45qtKl1mSpmbA1gEcjraJPxGw98"
+    },
+    {
+      "name": "Elias Thorne",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCdkq_febjdKepGrEDIuPCz4gDnqqDIEP4kn2ZwuL4weZNoK-0o1ex8gfn-1AXq9tbpNdDJtR5vrsjKt84KK3ElFMWoZowOtq2isZxKiEU96QZU6PByZsk1fcgn5-aKOopav7bGLqF8XFKdk3upPfEUPMZT6jOPI8AmDkLrFwhnQez_bYNm9N1yxpYIH_724YhMImsZIU3rqyMmqXPj6-8Qbi1PtbmbsrxH-EL56CP9fvW1UNnwwNsXkbUVfK0NY00Qlm2Hgv8tMXYb"
+    },
+    {
+      "name": "Julian Rex",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAFfXdsZo0fbJB1tEYEMr0vltJgTLoq4xtaUxpmCg6OfH8aBYaILbiyDxZbLA6pUGk_l_oPdlM3_xcAWaW8ybzVVz8-lhXAK5ztBtSHu2SVYm1nN0lq8-wkN4BK8RNa6HthDdPGuko8XsnhOQ4xESZWZpMJAu4-nUyCgeJ2NtDLXujEVcv8X7c70MJzTv0dRXJFx1o_Ve-I3w-JqfASVCafPkiWr0HQfyh0FgueEz1q49KIL4n15yUpRKvSOsNxCfeB-Qn9aqk11wz7"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Verified Resident",
+      "quote": "Excellent Service. The best in the Sinhgad Campus area.",
+      "source": "Google Reviews"
+    },
+    {
+      "name": "Regular Client",
+      "quote": "Mastering the art of grooming. Professional and premium.",
+      "source": "Verified Experience"
+    }
+  ]
+}

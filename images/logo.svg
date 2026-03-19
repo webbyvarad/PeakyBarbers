@@ -1,0 +1,38 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .gold { fill: #C5A059; }
+      .text-main { font-family: 'serif'; font-weight: 900; text-transform: uppercase; }
+      .text-sub { font-family: 'sans-serif'; font-weight: 700; text-transform: uppercase; }
+    </style>
+  </defs>
+  
+  <g transform="translate(250, 250)">
+    <!-- Outer Decorative Border (Simplified) -->
+    <path d="M-180,-120 L-180,120 Q-180,150 -150,150 L150,150 Q180,150 180,120 L180,-120 Q180,-150 150,-150 L-150,-150 Q-180,-150 -180,-120" fill="none" stroke="#C5A059" stroke-width="4" opacity="0.3"/>
+    
+    <!-- Inner Circle -->
+    <circle r="120" fill="none" stroke="#C5A059" stroke-width="2" />
+    
+    <!-- Man with Flat Cap Portrait -->
+    <g transform="translate(0, -30) scale(0.8)">
+      <path d="M0,-80 C-40,-80 -80,-60 -85,-20 C-85,10 -60,30 0,30 C60,30 85,10 85,-20 C80,-60 40,-80 0,-80 Z" class="gold" /> <!-- Cap -->
+      <path d="M0,40 C-25,40 -45,60 -45,90 C-45,120 -25,145 0,145 C25,145 45,120 45,90 C45,60 25,40 0,40 Z" class="gold" /> <!-- Face/Neck -->
+    </g>
+    
+    <!-- Brand Name curved / Badge Text -->
+    <text y="70" class="gold text-main" font-size="28" text-anchor="middle" letter-spacing="4">THE PEAKY BARBERS</text>
+    
+    <!-- Crossing Scissors at bottom -->
+    <g transform="translate(0, 110) scale(0.4)" stroke="#C5A059" stroke-width="4" fill="none">
+      <path d="M-50,-50 L50,50" />
+      <path d="M50,-50 L-50,50" />
+      <circle cx="-60" cy="-60" r="15" />
+      <circle cx="60" cy="-60" r="15" />
+    </g>
+    
+    <text y="145" class="gold text-sub" font-size="12" text-anchor="middle" letter-spacing="8">CUTS & SHAVES</text>
+  </g>
+</svg>
+
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Peaky Barbers | Premium Grooming in Pune</title>
+  
+  <!-- Font Setup -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#111111',
+            brandSurface: '#1A1A1A',
+            brandGold: '#C5A059',
+            brandGoldLight: '#F5E0A3',
+            brandGrey: '#2D2D2D'
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+          },
+          boxShadow: {
+            'glow': '0 0 20px -5px rgba(197, 160, 89, 0.4)',
+            'glow-strong': '0 0 30px -5px rgba(197, 160, 89, 0.6)',
+            'linear-light': '0 0 15px rgba(197, 160, 89, 0.5)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #111111; color: #F3F4F6; }
+    .hero-overlay { background: linear-gradient(180deg, rgba(17,17,17,0.4) 0%, rgba(17,17,17,0.95) 100%); }
+    .text-gradient-gold {
+      background: linear-gradient(to right, #C5A059, #F5E0A3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(45, 45, 45, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(197, 160, 89, 0.3);
+      transform: translateY(-4px);
+    }
+    #hero-section { cursor: none; }
+    #hero-section a { cursor: none; }
+    .inverted-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 24px; height: 24px;
+      background-color: white;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10000;
+      mix-blend-mode: difference;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+    }
+    #hero-section:hover .inverted-cursor { opacity: 1; }
+    .inverted-cursor.expanded { width: 140px; height: 140px; }
+    
+    /* Textured Wall Effect */
+    .textured-bg {
+      background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+      background-blend-mode: overlay;
+    }
+    
+    /* Linear Light Dividers */
+    .linear-divider {
+      height: 2px;
+      background: #C5A059;
+      box-shadow: 0 0 15px #C5A059;
+      width: 100%;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body class="antialiased font-sans flex flex-col min-h-screen textured-bg">
+
+  <nav class="fixed w-full z-50 bg-brandDark/80 backdrop-blur-md border-b border-white/5 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <a href="index.html" class="flex items-center gap-4 group">
+          <div class="w-16 h-16 transition-all duration-500 group-hover:scale-105">
+            <img src="images/logo.svg" alt="The Peaky Barbers" class="w-full h-full">
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs text-brandGold tracking-[0.4em] uppercase font-bold mb-0.5">By Order Of</span>
+            <span class="text-2xl font-serif font-bold tracking-widest text-white uppercase">The Peaky Barbers</span>
+          </div>
+        </a>
+        <div class="hidden md:flex space-x-10 items-center uppercase text-xs tracking-[0.3em] font-bold">
+          <a href="#about" class="text-gray-400 hover:text-brandGold transition-colors">The Sanctuary</a>
+          <a href="#services" class="text-gray-400 hover:text-brandGold transition-colors">Services</a>
+          <a href="booking.html" class="bg-brandGold text-brandDark px-8 py-3 rounded-md font-black hover:bg-white hover:shadow-glow-strong transition-all duration-500">Book Session</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero-section" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div id="inverted-cursor" class="inverted-cursor"></div>
+    <div class="absolute inset-0 z-0">
+      <img src="images/storefront.jpg" alt="The Peaky Barbers Storefront" class="w-full h-full object-cover opacity-70">
+      <div class="absolute inset-0 hero-overlay"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
+      <span class="text-2xl md:text-3xl text-brandGold font-serif mb-6 block opacity-90 tracking-widest">द पिकी बारबर्स</span>
+      <h2 class="text-primary uppercase tracking-[0.5em] font-black text-brandGold/80 mb-6 text-xs md:text-sm">Premium Grooming • Pune's Finest</h2>
+      <h1 id="hero-text" class="text-6xl md:text-9xl font-serif font-bold mb-8 tracking-tighter text-white leading-none inline-block">
+        THE PEAKY<br>
+        <span class="text-gradient-gold italic pr-4">BARBERS</span>
+      </h1>
+      <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed tracking-wide">
+        "Excellent Service." Experience a legacy of craftsmanship at Shop No 1, Sinhgad Campus. 
+      </p>
+      <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
+        <a href="booking.html" class="group bg-brandGold flex items-center justify-center text-brandDark px-12 py-5 rounded-sm font-black text-xs uppercase tracking-[0.3em] hover:bg-white shadow-glow hover:shadow-glow-strong transition-all duration-500 transform hover:-translate-y-1">
+          Reserve Chair
+          <svg class="ml-3 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Linear Ceiling Light Decor -->
+    <div class="absolute top-0 left-1/4 w-1 h-32 linear-divider opacity-20"></div>
+    <div class="absolute top-0 right-1/3 w-1 h-48 linear-divider opacity-10"></div>
+  </section>
+
+
+  <section id="about" class="py-32 bg-brandDark relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4 pt-12">
+            <img src="images/interior_1.jpg" alt="The Sanctuary Interior" class="rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 object-cover h-80 w-full shadow-2xl border border-white/5">
+            <img src="images/interior_2.jpg" alt="Barber Chair" class="rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 object-cover h-64 w-full shadow-2xl border border-white/5">
+          </div>
+          <div class="space-y-4">
+            <img src="images/interior_1.jpg" alt="Detail" class="rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 object-cover h-64 w-full shadow-2xl border border-white/5">
+            <img src="images/interior_2.jpg" alt="Craftsmanship" class="rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 object-cover h-80 w-full shadow-2xl border border-white/5">
+          </div>
+        </div>
+        <div>
+          <span class="text-brandGold uppercase tracking-[0.5em] text-xs font-bold block mb-6">The Sanctuary</span>
+          <h2 class="text-5xl lg:text-7xl font-serif font-bold mb-10 leading-none text-white">A Ritual of <br><span class="text-gradient-gold italic font-normal">Transformation</span></h2>
+          <p class="text-gray-400 text-lg mb-8 leading-relaxed font-light tracking-wide">
+            Located at Shop No 1, Sinhgad Campus, The Peaky Barbers is more than a shop—it's a destination for the modern man who values tradition and precision.
+          </p>
+          <div class="flex items-center gap-6 mt-12">
+            <div class="w-16 h-px bg-brandGold"></div>
+            <span class="text-xs uppercase tracking-[0.4em] font-bold text-brandGold/60">By Order Of The Peaky Blinders</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Decor -->
+    <div class="absolute bottom-0 right-0 w-64 h-64 bg-brandGold/5 blur-[120px] rounded-full"></div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-24 bg-brandDark border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brandGold uppercase tracking-[0.3em] text-sm font-bold block mb-4">Client Feedback</span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-white">Pune's Choice</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="glass-card p-10 rounded-2xl relative border-brandGold/20 text-center">
+          <div class="flex justify-center text-brandGold mb-6">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-2xl text-white italic mb-8 font-serif leading-relaxed">"Excellent Service. The best in the Sinhgad Campus area."</p>
+          <div>
+            <h4 class="font-bold text-brandGold uppercase tracking-widest text-sm">Verified Resident</h4>
+            <p class="text-xs text-gray-500 mt-1">Via Google Reviews</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-10 rounded-2xl relative text-center">
+          <div class="flex justify-center text-brandGold mb-6">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-2xl text-white italic mb-8 font-serif leading-relaxed">"Mastering the art of grooming. Professional and premium."</p>
+          <div>
+            <h4 class="font-bold text-brandGold uppercase tracking-widest text-sm">Regular Client</h4>
+            <p class="text-xs text-gray-500 mt-1">Verified Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 bg-brandSurface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brandGold uppercase tracking-[0.3em] text-sm font-bold block mb-4">The Menu</span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-white">Crafted Services</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 rounded-2xl relative overflow-hidden group border-brandGold/30">
+          <div class="absolute top-0 right-0 bg-brandGold text-brandDark text-[10px] font-bold px-4 py-1.5 uppercase tracking-widest rounded-bl-lg">Recommended</div>
+          <h3 class="text-2xl font-serif font-bold mb-2 text-brandGold">Gentleman's Package</h3>
+          <div class="text-brandGold font-bold text-xl mb-4">₹3,200 <span class="text-xs text-gray-500 uppercase tracking-widest font-normal ml-2">120 Mins</span></div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-8">The ultimate experience. Includes Classic Haircut, Royal Shave, and a Scalp Massage.</p>
+          <a href="booking.html" class="block w-full text-center border border-brandGold text-brandGold py-3 rounded-lg uppercase tracking-widest text-xs font-bold hover:bg-brandGold hover:text-brandDark transition-colors">Book Package</a>
+        </div>
+        <div class="glass-card p-8 rounded-2xl group flex flex-col">
+          <h3 class="text-2xl font-serif font-bold mb-2 text-white group-hover:text-brandGold transition-colors">Precision Haircut</h3>
+          <div class="text-white font-bold text-xl mb-4">₹1,200 <span class="text-xs text-gray-500 uppercase tracking-widest font-normal ml-2">45 Mins</span></div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">A tailored consultation followed by a precision cut, wash, and styling.</p>
+          <a href="booking.html" class="block w-full text-center border border-white/20 text-white py-3 rounded-lg uppercase tracking-widest text-xs font-bold hover:border-brandGold hover:text-brandGold transition-colors">Book Cut</a>
+        </div>
+        <div class="glass-card p-8 rounded-2xl group flex flex-col">
+          <h3 class="text-2xl font-serif font-bold mb-2 text-white group-hover:text-brandGold transition-colors">The Royal Shave</h3>
+          <div class="text-white font-bold text-xl mb-4">₹1,500 <span class="text-xs text-gray-500 uppercase tracking-widest font-normal ml-2">60 Mins</span></div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">Our signature straight-razor shave with hot towel prep and premium oils.</p>
+          <a href="booking.html" class="block w-full text-center border border-white/20 text-white py-3 rounded-lg uppercase tracking-widest text-xs font-bold hover:border-brandGold hover:text-brandGold transition-colors">Book Shave</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-brandDark pt-20 pb-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-2">
+          <span class="text-3xl font-serif font-bold text-white tracking-widest uppercase">The Peaky Barbers</span>
+          <p class="mt-6 text-gray-400 max-w-sm leading-relaxed font-light">Pune's finest grooming establishment for the modern man.</p>
+        </div>
+        <div>
+          <h4 class="text-brandGold font-bold mb-6 uppercase tracking-widest text-xs">Hours</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li>Daily: 10:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-brandGold font-bold mb-6 uppercase tracking-widest text-xs">Find Us</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li>Shop No 1, Sinhgad Campus<br>Pune, MH 411041</li>
+            <li class="pt-2 text-brandGold">+91 00000 00000</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/5 text-center">
+        <p class="text-gray-600 text-xs tracking-widest uppercase">© 2024 The Peaky Barbers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const cursor = document.getElementById('inverted-cursor');
+    const heroSection = document.getElementById('hero-section');
+    const heroText = document.getElementById('hero-text');
+    if (heroSection && cursor) {
+      document.addEventListener('mousemove', (e) => {
+        requestAnimationFrame(() => {
+          cursor.style.left = e.clientX + 'px';
+          cursor.style.top = e.clientY + 'px';
+        });
+      });
+      if (heroText) {
+        heroText.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
+        heroText.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
+      }
+    }
+  </script>
+</body>
+</html>
